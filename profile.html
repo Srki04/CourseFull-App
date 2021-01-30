@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Created by Robert Babaev-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profilestyle.css">
+    <script src="profile.js"></script>
+    <title>Profile</title>
+</head>
+
+<body onload="init()">
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="navclose">&times;</a>
+        <a href="#">HOME</a>
+        <a href="#">PROFILE</a>
+        <a href="#">HUBS</a>
+        <a href="#">GROUPS</a>
+    </div>
+    <div id="header" class="header">
+        <div id="sidebar-btn" class="sidebar-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <span class="site-name">COURSE<span class="highlight-text">FULL</span></span>
+        <div class="dropdown">
+            <button id="user" class="user-btn btn-style">USERNAME</button>
+            <div id="userdropdown" class="dropdown-content">
+                <a href="javascript:void(0)" id="logout">LOGOUT</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="main-area">
+        <div id="page-name" class="page-name">USERNAME</div>
+        <div class="functionality">
+            <table class="targets">
+                <h1 class="section-title">TARGETS</h1>
+                <tr>
+                    <td>GOAL:</td>
+                    <td><span id="goalmark">90</span>%</td>
+                    <td><input type="text" class="goal-input" name="newgoal" id="newgoal"></td>
+                    <td>
+                        <button id="goalsubmitbtn" class="btn-style submit-btn">OK</button>
+                        <button id="goalbtn" class="btn-style edit-btn">EDIT</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CURRENT MARK:</td>
+                    <td><span id="currentmark">90</span>%</td>
+                </tr>
+                <tr>
+                    <td>TARGET:</td>
+                    <td><span id="targetmark">90</span>%</td>
+                </tr>
+            </table>
+            <!-- Maybe style the current mark in different colours to show how close the user is to hitting the goal-->
+            <div id="hubs">
+                <h1 class="section-title">HUBS</h1>
+                <button class="accordion btn-style">HUB 1<span class="avg">Average Mark: <span
+                            id="hub1avg">90</span>%</span></button>
+                <div class="panel">
+                    <button class="accordion btn-style-inner">COURSE 1<span class="avg">Current Mark: <span
+                                id="hub1course1avg">90</span>%</span></button>
+                    <div class="panel">
+                        <span class="complete">Weight Completed: <span id="hub1course1completed">35</span>%</span>
+                    </div>
+                    <button class="accordion btn-style-inner">COURSE 2<span class="avg">Current Mark: <span
+                                id="hub1course2avg">90</span>%</span></button>
+                    <div class="panel">
+                        <span class="complete">Weight Completed: <span id="hub1course2completed">50</span>%</span>
+                    </div>
+                </div>
+                <button class="accordion btn-style">HUB 2<span class="avg">Average Mark: <span
+                            id="hub2avg">90</span>%</span></button>
+                <div class="panel">
+                    <button class="accordion btn-style-inner">COURSE 1<span class="avg">Current Mark: <span
+                                id="hub2course1avg">90</span>%</span></button>
+                    <div class="panel">
+                        <span class="complete">Weight Completed: <span id="hub2course1completed">35</span>%</span>
+                    </div>
+                    <button class="accordion btn-style-inner">COURSE 2<span class="avg">Current Mark: <span
+                                id="hub2course2avg">90</span>%</span></button>
+                    <div class="panel">
+                        <span class="complete">Weight Completed: <span id="hub2course2completed">50</span>%</span>
+                    </div>
+                </div>
+            </div>
+            <!--Note: Sort deadlines by time, otherwise the feature is a bit pointless-->
+            <div id="deadlines">
+                <h1 class="section-title">DEADLINES</h1>
+                <table class="deadline-table">
+                    <tr class="deadline-header">
+                        <th>COURSE NAME</th>
+                        <th>COMPONENT NAME</th>
+                        <th>DD/MM/YYYY</th>
+                        <th>HH:MM</th>
+                    </tr>
+                    <tr>
+                        <td>COURSE NAME</td>
+                        <td>COMPONENT NAME</td>
+                        <td>DD/MM/YYYY</td>
+                        <td>HH:MM</td>
+                    </tr>
+                    <tr>
+                        <td>COURSE NAME</td>
+                        <td>COMPONENT NAME</td>
+                        <td>DD/MM/YYYY</td>
+                        <td>HH:MM</td>
+                    </tr>
+                    <tr>
+                        <td>COURSE NAME</td>
+                        <td>COMPONENT NAME</td>
+                        <td>DD/MM/YYYY</td>
+                        <td>HH:MM</td>
+                    </tr>
+                    <tr>
+                        <td>COURSE NAME</td>
+                        <td>COMPONENT NAME</td>
+                        <td>DD/MM/YYYY</td>
+                        <td>HH:MM</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="Account Management">
+                <h1 class="section-title">ACCOUNT</h1>
+                <h2>DELETE ACCOUNT</h2>
+                <h3 class="warning">WARNING</h3>
+                <p>Account deletion is permanent. If you delete your account, all saved courses, deadlines, contacts,
+                    and any other items attached to your account will be lost.</p>
+                <button id="accountdelete" class="btn-style delete-btn">DELETE ACCOUNT</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
