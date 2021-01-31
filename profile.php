@@ -84,42 +84,41 @@
                   $Hubs = "SELECT * FROM `hubs`";
                   $HubsFound = mysqli_query($Link, $Hubs) or die ("Sorry, the error happened. What are you gonna do, the is not that much easy, but it is fun. ");
                   $FoundRows = $HubsFound->num_rows;
+
+                  $Courses = "SELECT * FROM `courses`";
+                  $CoursesFound = mysqli_query($Link, $Courses) or die ("Failed to found anything in here, are you sure it is up to us? It, probabbly, is ;) :D . ");
+                  $FoundedCoursesRows = $CoursesFound->num_rows;
                   if($FoundRows > 0){
                     while(($Rows = mysqli_fetch_row($HubsFound)) != NULL){
                       echo "<button class='accordion btn-style'>$Rows[1]<span class='avg'>Average Mark: <span id='hub1avg'>$Rows[3]</span>%</span></button>";
-                        echo "<div class='panel'>";
-                    echo "<button class='accordion btn-style-inner'>COURSE 1<span class='avg'>Current Mark: <span id='hub1course1avg'>90</span>%</span></button>";
-                    echo "<div class='panel'>";
-                        echo "<span class='complete'>Weight Completed: <span id='hub1course1completed'>35</span>%</span>";
-                    echo "</div>";
-                    echo "<button class='accordion btn-style-inner'>COURSE 2<span class='avg'>Current Mark: <span id='hub1course2avg'>90</span>%</span></button>";
-                    echo "<div class='panel'>";
-                        echo "<span class='complete'>Weight Completed: <span id='hub1course2completed'>50</span>%</span>";
-                    echo "</div>";
-                echo "</div>";
+
+                      if($FoundedCoursesRows > 0){
+                        while(($CourseRows = mysqli_fetch_row($CoursesFound)) != NULL){
+                            if($CourseRows[2] == $Rows[0]){
+                              echo "<div class='panel'>";
+                                echo "<button class='accordion btn-style-inner'>$CourseRows[1]<span class='avg'>Current Mark: <span id='hub1course1avg'>$CourseRows[3]</span>%</span></button>";
+                                echo "<div class='panel'>";
+                                  echo "<span class='complete'>Weight Completed: <span id='hub1course1completed'>None</span>%</span>";
+                                echo "</div>";
+                              echo "</div>";
+                            }
+                        }
+                      }
+                      else{
+                        echo "You do not have any Courses here, yet, but you can go to Hubs section of side menu to create some :) :) . ";
+                      }
+
                     }
                   }
                   else{
                     echo "You do not have any Hubs, yet. ";
                   }
                  ?>
-
-                <div class="panel">
-                    <button class="accordion btn-style-inner">COURSE 1<span class="avg">Current Mark: <span
-                                id="hub2course1avg">90</span>%</span></button>
-                    <div class="panel">
-                        <span class="complete">Weight Completed: <span id="hub2course1completed">35</span>%</span>
-                    </div>
-                    <button class="accordion btn-style-inner">COURSE 2<span class="avg">Current Mark: <span
-                                id="hub2course2avg">90</span>%</span></button>
-                    <div class="panel">
-                        <span class="complete">Weight Completed: <span id="hub2course2completed">50</span>%</span>
-                    </div>
-                </div>
             </div>
             <!--Note: Sort deadlines by time, otherwise the feature is a bit pointless-->
             <div id="deadlines">
                 <h1 class="section-title">DEADLINES</h1>
+                <h4>You currently have 0 deadlines. </h4>
                 <table class="deadline-table">
                     <tr class="deadline-header">
                         <th>COURSE NAME</th>
