@@ -21,7 +21,7 @@
         <a href="javascript:void(0)" class="closebtn" id="navclose">&times;</a>
         <a href="logout.php">HOME</a>
         <a href="profile.php">PROFILE</a>
-        <a href="#">HUBS</a>
+        <a href="hubs.php">HUBS</a>
         <a href="groups.php">GROUPS</a>
     </div>
     <div id="header" class="header">

@@ -1,3 +1,7 @@
+<?php
+  include "connection.php";
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,16 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="componentstyle.css">
     <script src="component.js"></script>
-    <title>Component</title>
+    <title>CourseFull - Component</title>
 </head>
 
 <body onload="init()">
     <div id="sidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" id="navclose">&times;</a>
-        <a href="#">HOME</a>
-        <a href="#">PROFILE</a>
-        <a href="#">HUBS</a>
-        <a href="#">GROUPS</a>
+      <a href="javascript:void(0)" class="closebtn" id="navclose">&times;</a>
+      <a href="logout.php">HOME</a>
+      <a href="profile.php">PROFILE</a>
+      <a href="hubs.php">HUBS</a>
+      <a href="groups.php">GROUPS</a>
     </div>
     <div id="header" class="header">
         <div id="sidebar-btn" class="sidebar-btn">
@@ -27,7 +31,7 @@
         </div>
         <span class="site-name">COURSE<span class="highlight-text">FULL</span></span>
         <div class="dropdown">
-            <button id="user" class="user-btn btn-style">USERNAME</button>
+            <button id="user" class="user-btn btn-style"><?php echo $_SESSION['firstname'] ?> <?php echo $_SESSION['lastname'] ?></button>
             <div id="userdropdown" class="dropdown-content">
                 <a href="javascript:void(0)" id="logout">LOGOUT</a>
             </div>
@@ -39,7 +43,7 @@
             <table class="component-data">
                 <tr>
                     <td>COURSE: </td>
-                    <td><span id="course-name">COURSE 1</span></td>
+                    <td><span id="course-name">COurse</span></td>
                 </tr>
                 <tr>
                     <td>NAME: </td>
