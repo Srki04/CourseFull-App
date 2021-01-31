@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Created by Robert Babaev-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hubstyle.css">
+    <script src="hubs.js"></script>
+    <title>Hubs</title>
+</head>
+
+<body onload="init()">
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="navclose">&times;</a>
+        <a href="#">HOME</a>
+        <a href="#">PROFILE</a>
+        <a href="#">HUBS</a>
+        <a href="#">GROUPS</a>
+    </div>
+    <div id="header" class="header">
+        <div id="sidebar-btn" class="sidebar-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <span class="site-name">COURSE<span class="highlight-text">FULL</span></span>
+        <div class="dropdown">
+            <button id="user" class="user-btn btn-style">USERNAME</button>
+            <div id="userdropdown" class="dropdown-content">
+                <a href="javascript:void(0)" id="logout">LOGOUT</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-area">
+        <div id="page-name" class="page-name">HUBS & COURSES</div>
+        <div class="functionality">
+            <!--I'm thinking sort in alphabetical order-->
+            <!--Also, the a tags should go to their respective components-->
+            <div id="hubs">
+                <div class="hub">
+                    <div class="accordion">
+                        <button class="remove-hub btn-style">REMOVE HUB</button>
+                        <button class="accordion-btn btn-style">HUB 1<span class="avg">Average Mark: <span
+                                    id="hub1avg">90</span>%</span></button>
+                    </div>
+                    <div class="panel">
+                        <div class="accordion">
+                            <button class="remove-course btn-style-inner">REMOVE COURSE</button>
+                            <button class="accordion-btn btn-style-inner">COURSE 1<span class="avg">Current Mark: <span
+                                        id="hub1course1avg">90</span>%</span></button>
+                        </div>
+                        <div class="panel">
+                            <div class="comp-container">
+                                <button class="remove-component btn-style-inner">REMOVE</button>
+                                <a href="#" class="component">Component 1</a>
+                                <span class="comp-mark">Mark: <span id="hub1course1component1mark">90</span>%</span>
+                            </div>
+                            <div class="comp-container">
+                                <button class="remove-component btn-style-inner">REMOVE</button>
+                                <a href="#" class="component">Component 2</a>
+                                <span class="comp-mark">Mark: <span id="hub1course1component2mark">90</span>%</span>
+                            </div>
+                            <div class="compname-submit">
+                                Enter a Component Name:<input type="text" class="compname"></input>
+                                <button class="btn-style-innermost compname-submit-btn">OK</button>
+                            </div>
+                            <button class="btn-style-innermost add-component">ADD COMPONENT</button>
+                        </div>
+                        <div class="accordion">
+                            <button class="remove-course btn-style-inner">REMOVE COURSE</button>
+                            <button class="accordion-btn btn-style-inner">COURSE 2<span class="avg">Current Mark: <span
+                                        id="hub1course2avg">90</span>%</span></button>
+                        </div>
+                        <div class="panel">
+                            <div class="comp-container">
+                                <button class="remove-component btn-style-inner">REMOVE</button>
+                                <a href="#" class="component">Component 1</a>
+                                <span class="comp-mark">Mark: <span id="hub1course2component1mark">90</span>%</span>
+                            </div>
+                            <div class="comp-container">
+                                <button class="remove-component btn-style-inner">REMOVE</button>
+                                <a href="#" class="component">Component 2</a>
+                                <span class="comp-mark">Mark: <span id="hub1course2component2mark">90</span>%</span>
+                            </div>
+                            <div class="compname-submit">
+                                Enter a Component Name:<input type="text" class="compname"></input>
+                                <button class="btn-style-innermost compname-submit-btn">OK</button>
+                            </div>
+                            <button class="btn-style-innermost add-component">ADD COMPONENT</button>
+                        </div>
+                        <div class="coursename-submit">
+                            Enter a Course Name:<input type="text" class="compname"></input>
+                            <button class="btn-style-inner coursename-submit-btn">OK</button>
+                        </div>
+                        <button class="btn-style-inner add-course">ADD COURSE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hubname-submit">
+                Enter a Hub Name:<input type="text" class="compname"></input>
+                <button class="btn-style hubname-submit-btn">OK</button>
+            </div>
+            <button class="btn-style add-hub">ADD HUB</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
