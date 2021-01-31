@@ -18,7 +18,7 @@ function init(){
                 }
             }
         }
-    })
+    });
     targetStyling();
     hubViewSetup();
 }

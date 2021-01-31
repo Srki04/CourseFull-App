@@ -76,11 +76,19 @@ html, body{
     border:none;
 }
 
+.btn-style:hover{
+    background-color: #00c54f; 
+}
+
 .btn-style-inner{
     background-color: #71ffaa;
     color:#000;
     cursor: pointer;
     border:none;
+}
+
+.btn-style-inner:hover{
+    background-color: #59c484;
 }
 
 .dropdown {
@@ -177,10 +185,6 @@ html, body{
     width:100%;
     text-align: left;
     transition:0.4;
-}
-
-.active, .accordion:hover {
-    background-color: #00c54f; 
 }
 
 .panel{
