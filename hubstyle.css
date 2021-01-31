@@ -68,7 +68,6 @@ html, body{
     left:45px;
 }
 
-
 .btn-style {
     background-color: #00ff66;
     color:#000;
@@ -89,6 +88,17 @@ html, body{
 
 .btn-style-inner:hover{
     background-color: #59c484;
+}
+
+.btn-style-innermost{
+    background-color: #f0f0f0;
+    color:#000;
+    cursor: pointer;
+    border:none;
+}
+
+.btn-style-innermost:hover{
+    background-color: #fff;
 }
 
 .dropdown {
@@ -119,7 +129,7 @@ html, body{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
+} 
 
 .show {display: block;}
 
@@ -147,44 +157,21 @@ html, body{
     padding:5px;
 }
 
-.targets{
-    font-size: 48px;
-}
-
-.targets td{
-    padding-right: 30px;
-}
-
-.edit-btn{
-    padding:10px;
-    width: 100px;
-    position:relative;
-    top:-10px;
-}
-.submit-btn{
-    padding:10px;
-    width: 100px;
-    position:relative;
-    top:-10px;
-    display:none;
-}
-
-.goal-input{
-    position: relative;
-    top:-10px;
-    display:none;
-}
-
 .section-title{
     font-size: 48px;
 }
 
 .accordion{
-    padding:5px;
-    font-size: 24px;
-    width:100%;
-    text-align: left;
+    width:90%;
     transition:0.4;
+}
+
+.accordion-btn{
+    width:90%;
+    text-align: left;
+    overflow: hidden;
+    font-size: 24px;
+    padding:5px;
 }
 
 .panel{
@@ -194,47 +181,88 @@ html, body{
     margin-left:15px;
 }
 
+.component{
+    text-decoration: none;
+    color:black;
+    top:15px;
+    font-size: 24px;
+    display:inline-block;
+    padding:5px;
+}
+
+.component:hover{
+    color:#00ff66;
+}
+
+.comp-container{
+    margin-left: 40px;
+}
+
+.add-hub{
+    padding:5px;
+    font-size: 24px;
+    text-align: left;
+    margin-right: 10%;
+    float:right;
+}
+
+.add-course, .add-component{
+    padding:5px;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-right: 10%;
+    float:right;
+}
+
+.compname-submit-btn, .coursename-submit-btn, .hubname-submit-btn{
+    padding:5px;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-right: 10%;
+}
+
+.compname-submit{
+    display:none;
+    position: relative;
+    left: 40px;
+}
+
+.coursename-submit, .hubname-submit{
+    display:none;
+    position: relative;
+}
+
+.remove-hub{
+    padding: 13px 5px;
+    position:relative;
+    top:-4px;
+}
+
+.remove-course{
+    padding: 13px 5px;
+    position:relative;
+    top:-4px;
+}
+
+.remove-component{
+    padding: 5px 5px;
+    position:relative;
+    top:-4px;
+    display:inline;
+}
+
 .avg{
     float:right;
-    margin-right:150px;
+    margin-right:5%;
 }
 
-.complete{
-    float:right;
-    margin-right:150px;
+.comp-mark{
     padding:5px;
     font-size:20px;
-}
-
-.deadline-table{
-    border-collapse: collapse;
-    width:100%;
-    font-size:20px;
-}
-
-.deadline-table td{
-    background-color:#00ff66;
-    border-style: none none solid none;
-    border-color: white;
-    border-width: 4px;
-    padding:5px;
-    text-align: center;
-}
-
-.deadline-header th{
-    background-color: #00ff6630;
-    border-style: none none solid none;
-    border-color: black;
-    border-width: 1px;
-}
-
-.delete-btn{
-    background-color: red;
-    color:white;
-}
-
-.warning{
-    color:red;
+    display:block;
+    margin-left:4%;
 }
 
 .footer{

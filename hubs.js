@@ -3,9 +3,6 @@
 function init(){
     document.getElementById("sidebar-btn").addEventListener("click", openNav);
     document.getElementById("navclose").addEventListener("click", closeNav);
-    document.getElementById("goalbtn").addEventListener("click", editGoal);
-    document.getElementById("goalsubmitbtn").addEventListener("click", confirmGoal);
-    document.getElementById("accountdelete").addEventListener("click", deleteAccount);
     document.getElementById("user").addEventListener("click", openUserMenu);
     document.getElementById("logout").addEventListener("click", logout);
     window.addEventListener("click", function(event){
@@ -19,45 +16,19 @@ function init(){
             }
         }
     });
-    targetStyling();
     hubViewSetup();
-}
-
-function editGoal(){
-    document.getElementById("newgoal").style.display="inline";
-    document.getElementById("goalsubmitbtn").style.display="inline";
-    document.getElementById("goalbtn").style.display="none";
-}
-
-function confirmGoal(){
-    document.getElementById("newgoal").style.display="none";
-    document.getElementById("goalsubmitbtn").style.display="none";
-    document.getElementById("goalbtn").style.display="inline";
-}
-
-//Styles the Current Mark value to red, green, or yellow, depending on where the user's mark stands against their goal
-function targetStyling(){
-    let goal = document.getElementById("goalmark");
-    let current = document.getElementById("currentmark");
-    let percent = parseFloat(current.innerText) / parseFloat(goal.innerText) * 100;
-    if(percent >= 100){
-        current.parentNode.style.color = "#00ff66";
-    }
-    else if(percent >= 90){
-        current.parentNode.style.color = "#ffe600";
-    }
-    else{
-        current.parentNode.style.color = "#ff0000";
-    }
+    componentAddSetup();
+    courseAddSetup();
+    hubAddSetup();
 }
 
 function hubViewSetup(){
-    let accordion = document.getElementsByClassName("accordion");
+    let accordion = document.getElementsByClassName("accordion-btn");
     for(let i = 0; i < accordion.length; i++){
         accordion[i].addEventListener("click", function(){
             this.classList.toggle("active");
             this.classList.toggle("border-bottom");
-            var panel = this.nextElementSibling;
+            var panel = this.parentNode.nextElementSibling;
             if(panel.style.display === "block"){
                 panel.style.display = "none";
             }
@@ -68,8 +39,35 @@ function hubViewSetup(){
     }
 }
 
-function deleteAccount(){
-    console.log("ACCOUNT DELETED.");
+function componentAddSetup(){
+    addSetup("add-component","compname-submit-btn");
+}
+
+function addSetup(item1, item2){
+    let addbtn = document.getElementsByClassName(item1);
+    for(let i = 0; i < addbtn.length; i++){
+        addbtn[i].addEventListener("click", function(){
+            this.style.display = "none";
+            var submit = this.previousElementSibling;
+            submit.style.display = "inline";
+        });
+    }
+    let submitbtns = document.getElementsByClassName(item2);
+    for(let i = 0; i < submitbtns.length; i++){
+        submitbtns[i].addEventListener("click", function(){
+            this.parentNode.style.display = "none";
+            var add = this.parentNode.nextElementSibling;
+            add.style.display = "block";
+        });
+    }
+}
+
+function courseAddSetup(){
+    addSetup("add-course","coursename-submit-btn");
+}
+
+function hubAddSetup(){
+    addSetup("add-hub","hubname-submit-btn");
 }
 
 function openNav(){
