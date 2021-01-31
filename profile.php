@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include "connection.php";
  ?>
 
 <!DOCTYPE html>
@@ -57,7 +58,6 @@
                               $NewGoal = $_POST['newgoal'];
                               if($NewGoal != ""){
                                 $CurrentUser = $_SESSION['userid'];
-                                include "connection.php";
                                 $Query = "UPDATE `users` SET `goal`= $NewGoal WHERE `userid` = $CurrentUser";
                                 $ResultOfChanging = mysqli_query($Link, $Query) or die("Error happened, while trying to change your goal, please try this again later on");
                                 $_SESSION['goal'] = $NewGoal;
@@ -80,22 +80,30 @@
             <!-- Maybe style the current mark in different colours to show how close the user is to hitting the goal-->
             <div id="hubs">
                 <h1 class="section-title">HUBS</h1>
-                <button class="accordion btn-style">HUB 1<span class="avg">Average Mark: <span
-                            id="hub1avg">90</span>%</span></button>
-                <div class="panel">
-                    <button class="accordion btn-style-inner">COURSE 1<span class="avg">Current Mark: <span
-                                id="hub1course1avg">90</span>%</span></button>
-                    <div class="panel">
-                        <span class="complete">Weight Completed: <span id="hub1course1completed">35</span>%</span>
-                    </div>
-                    <button class="accordion btn-style-inner">COURSE 2<span class="avg">Current Mark: <span
-                                id="hub1course2avg">90</span>%</span></button>
-                    <div class="panel">
-                        <span class="complete">Weight Completed: <span id="hub1course2completed">50</span>%</span>
-                    </div>
-                </div>
-                <button class="accordion btn-style">HUB 2<span class="avg">Average Mark: <span
-                            id="hub2avg">90</span>%</span></button>
+                <?php
+                  $Hubs = "SELECT * FROM `hubs`";
+                  $HubsFound = mysqli_query($Link, $Hubs) or die ("Sorry, the error happened. What are you gonna do, the is not that much easy, but it is fun. ");
+                  $FoundRows = $HubsFound->num_rows;
+                  if($FoundRows > 0){
+                    while(($Rows = mysqli_fetch_row($HubsFound)) != NULL){
+                      echo "<button class='accordion btn-style'>$Rows[1]<span class='avg'>Average Mark: <span id='hub1avg'>$Rows[3]</span>%</span></button>";
+                        echo "<div class='panel'>";
+                    echo "<button class='accordion btn-style-inner'>COURSE 1<span class='avg'>Current Mark: <span id='hub1course1avg'>90</span>%</span></button>";
+                    echo "<div class='panel'>";
+                        echo "<span class='complete'>Weight Completed: <span id='hub1course1completed'>35</span>%</span>";
+                    echo "</div>";
+                    echo "<button class='accordion btn-style-inner'>COURSE 2<span class='avg'>Current Mark: <span id='hub1course2avg'>90</span>%</span></button>";
+                    echo "<div class='panel'>";
+                        echo "<span class='complete'>Weight Completed: <span id='hub1course2completed'>50</span>%</span>";
+                    echo "</div>";
+                echo "</div>";
+                    }
+                  }
+                  else{
+                    echo "You do not have any Hubs, yet. ";
+                  }
+                 ?>
+
                 <div class="panel">
                     <button class="accordion btn-style-inner">COURSE 1<span class="avg">Current Mark: <span
                                 id="hub2course1avg">90</span>%</span></button>

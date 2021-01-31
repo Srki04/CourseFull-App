@@ -38,19 +38,32 @@
         </div>
     </div>
     <div class="main-area">
-        <div id="page-name" class="page-name">COMPONENT</div>
+        <div id="page-name" class="page-name">Component</div>
         <div class="functionality">
             <table class="component-data">
                 <tr>
                     <td>COURSE: </td>
-                    <td><span id="course-name">COurse</span></td>
+                    <td><span id="course-name"><?php echo $_SESSION['coursecomponent'] ?></span></td>
                 </tr>
                 <tr>
                     <td>NAME: </td>
-                    <td><span id="comp-name">ASSIGNMENT 1</span></td>
+                    <td><span id="comp-name"><?php echo $_SESSION['componentname'] ?> </span></td>
                     <td class="edit-field">
-                        <input type="text" id="comp-name-input">
-                        <button class="btn-style submit-btn" id="submit-name">OK</button>
+                      <form method = "POST" action = "#">
+                        <input type="text" id="comp-name-input" name = "NewComponentName">
+                        <button class="btn-style submit-btn" id="submit-name" name = "ChangeName">OK</button>
+                        <?php
+                          if(isset($_POST["ChangeName"])){
+                            $NewName = $_POST['NewComponentName'];
+                            if($NewName != ""){
+                              $WhichComponent = $_SESSION['componentid'];
+                              $ChangeNameQuery = "UPDATE `components` SET `componentname`= $NewName WHERE `componentid` = $WhichComponent";
+                              $ChangeNameQueryResult = mysqli_query($Link, $ChangeNameQuery) or die ("I get to point, that I am that much tired and I will just write: Failed. ");
+                              header('Location: component.php');
+                            }
+                          }
+                        ?>
+                      </from>
                     </td>
                     <td><button class="btn-style edit-btn">EDIT</button></td>
                 </tr>

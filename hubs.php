@@ -99,26 +99,14 @@
                                                   header('Location: hubs.php');
                                                 }
                                                   echo "</form>";
-                                                echo "<a href='component.php' class='component'>$ComponentRow[1]</a>";
+                                                $_SESSION['componentname'] = $ComponentRow[1];
+                                                $_SESSION['coursecomponent'] = $CourseRow[1];
+
+                                                $_SESSION['componentid'] = $ComponentRow[0];
+
+                                                echo "<a href = 'component.php' class='component'>$ComponentRow[1]</a>";
                                                 echo "<span class='comp-mark'>Mark: <span id='hub1course1component1mark'>$ComponentRow[3]</span>%</span>";
                                             echo "</div>";
-
-                                            echo "<div class='panel'>";
-                                                echo "<div class='comp-container'>";
-                                                    echo "<button class='remove-component btn-style-inner'>REMOVE</button>";
-                                                    echo "<a href='#' class='component'>Component 1</a>";
-                                                    echo "<span class='comp-mark'>Mark: <span id='hub1course2component1mark'>90</span>%</span>";
-                                                echo "</div>";
-                                                echo "<div class='comp-container'>";
-                                                    echo "<button class='remove-component btn-style-inner'>REMOVE</button>";
-                                                    echo "<a href='#'' class='component'>Component 2</a>";
-                                                    echo "<span class='comp-mark'>Mark: <span id='hub1course2component2mark'>90</span>%</span>";
-                                                echo "</div>";
-                                                echo "<div class='compname-submit'>";
-                                                    echo "Enter a Component Name:<input type='text' class='compname'></input>";
-                                                    echo "<button class='btn-style-innermost compname-submit-btn'>OK</button>";
-                                                echo "</div>";
-                                                echo "<button class='btn-style-innermost add-component'>ADD COMPONENT</button>";
                                             echo "</div>";
                                       }
                                     }
