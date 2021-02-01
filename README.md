@@ -1,4 +1,4 @@
-![CourseFull](/coursefulltitle.png)
+![CourseFull](coursefulltitle.png)
 
 # CourseFull-App
 You have probably either been in or have heard of someone in the situation of trying to figure out what grade they need on a final exam to pass a course. Truth be told, it sucks. 
