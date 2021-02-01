@@ -22,3 +22,4 @@ Studying is rarely a solo affair. CourseFull lets you connect with classmates ea
  - MySQL
 
 <h4>See more: https://youtu.be/w84FBfVvILc . </h4> 
+<h6>This is a git hub repo of project that CourseFull made in cuHacking 2021 - one of the best Hackathons in the world ;) :) and we agreed to continue working on this project, but that continued work will be in private GitHub Repository. </h6>
