@@ -1,13 +1,15 @@
 <?php
   session_start();
   include "connection.php";
+
+  // Added php code by Srdjan Grbic
+
  ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <!--Created by Robert Babaev-->
-<!--Added php code by Srdjan Grbic-->
 
 <head>
     <meta charset="UTF-8">

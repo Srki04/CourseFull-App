@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2021 at 04:08 PM
+-- Generation Time: Jan 31, 2021 at 03:22 AM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -24,36 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `components`
---
-
-CREATE TABLE `components` (
-  `componentid` int(25) NOT NULL,
-  `componentname` varchar(50) NOT NULL,
-  `courseofcomponentid` int(25) NOT NULL,
-  `coursemark` int(3) NOT NULL,
-  `weight` int(3) NOT NULL,
-  `target` int(3) NOT NULL,
-  `actual` int(3) NOT NULL,
-  `deadline` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `courses`
---
-
-CREATE TABLE `courses` (
-  `courseid` int(25) NOT NULL,
-  `coursename` varchar(50) NOT NULL,
-  `hubofcourseid` int(25) NOT NULL,
-  `currentmark` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `groups`
 --
 
@@ -62,19 +32,6 @@ CREATE TABLE `groups` (
   `groupname` varchar(50) NOT NULL,
   `groupcreator` int(50) NOT NULL,
   `groupleader` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hubs`
---
-
-CREATE TABLE `hubs` (
-  `hubid` int(25) NOT NULL,
-  `hubname` varchar(50) NOT NULL,
-  `usercreatorid` int(50) NOT NULL,
-  `averagemark` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -106,32 +63,21 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userid`, `firstname`, `lastname`, `emailadress`, `password`, `goal`) VALUES
+(1, 'Srdjan', 'Grbic', 'srdjangrbic10@gmail.com', 'SidjaSr04gr04UvaSidjaSr04gr04Uva', 84);
+
+--
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `components`
---
-ALTER TABLE `components`
-  ADD PRIMARY KEY (`componentid`);
-
---
--- Indexes for table `courses`
---
-ALTER TABLE `courses`
-  ADD PRIMARY KEY (`courseid`);
 
 --
 -- Indexes for table `groups`
 --
 ALTER TABLE `groups`
   ADD PRIMARY KEY (`groupid`);
-
---
--- Indexes for table `hubs`
---
-ALTER TABLE `hubs`
-  ADD PRIMARY KEY (`hubid`);
 
 --
 -- Indexes for table `messengers`
@@ -150,28 +96,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `components`
---
-ALTER TABLE `components`
-  MODIFY `componentid` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `courses`
---
-ALTER TABLE `courses`
-  MODIFY `courseid` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
---
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
   MODIFY `groupid` int(50) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `hubs`
---
-ALTER TABLE `hubs`
-  MODIFY `hubid` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `messengers`
@@ -183,7 +111,7 @@ ALTER TABLE `messengers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `userid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,35 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #e0e0e0;
+}
+
+#Head{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #00FF66;
+}
+
+#GeneralDescription{
+  position: absolute;
+  height: 900px;
+  width: 800px;
+  left: 100px;
+  top: 12%;
+}
+
+.HeadLine{
+  font-size: 50px;
+  text-decoration: underline;
+  text-decoration-color: #00FF66;
+}
+
+#CreatedBy{
+  position: absolute;
+  height: 644px;
+  width: 800px;
+  right: 100px;
+  top: 76%;
+}

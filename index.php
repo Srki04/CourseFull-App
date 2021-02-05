@@ -1,4 +1,7 @@
 <?php
+
+// Created by Srdjan Grbic
+
 session_start();
  ?>
 <html>
@@ -6,6 +9,18 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CourseFull</title>
+    <style>
+    body{
+      overflow: hidden;
+    }
+    #LearnMore{
+      position: absolute;
+      left: 100px;
+      top: 42%;
+      color: #3498db;
+      font-size: 24px;
+    }
+    </style>
   </head>
   <body>
     <header id = "Head">
@@ -13,13 +28,20 @@ session_start();
     </header>
     <main>
       <div id = "EnterTheWebsite">
-        <h2 id = "Title">Take control of your <br> course load, set goals, and collaborate<br> to live your education to the fullest! </h2>
+        <h2 id = "Title">Take control of your <br> course load, set goals, and collaborate<br> to live your education to the fullest! </h2> <br>
+        <div id = "LearnMore">
+          <h4>Learn more: </h4>
+          <video style = "padding: 0px; " width = "550px" height = "322px" controls>
+            <source src = "CourseFullExplanation.mp4" type = "video/mp4">
+          </video>
+          <h5 style = "padding: 0px; margin: 0px; color: #00FF66">Stil not sure? <a href = "learnmore.php">Here</a> you can read everything about CourseFull</h5>
+        </div>
         <div id = "UserRegistrationForm">
           <form method = "POST" action = "#">
             <h3 style = "font-size: 25px; text-align: center; ">More you learn, more you earn. </h3>
-            <input name = "RFirstName" type = "text" placeholder = "Enter your First Name"> <input name = "RLastName" type = "text" placeholder = "Enter your Last Name">
-            <input name = "REmail" type = "text" placeholder = "Enter your e-mail" class = "RegistrationInput">
-            <input name = "RPassword" type = "password" placeholder = "Enter your password" class = "RegistrationInput">
+            <input name = "RFirstName" type = "text" placeholder = "Enter your First Name" required> <input name = "RLastName" type = "text" placeholder = "Enter your Last Name" required>
+            <input name = "REmail" type = "text" placeholder = "Enter your e-mail" class = "RegistrationInput" required>
+            <input name = "RPassword" type = "password" placeholder = "Enter your password" class = "RegistrationInput" required>
             <button name = "UserSignIn" type = "submit" class = "ProgrammerButton">Sign in</button>
             <?php
               if(isset($_POST['UserSignIn'])){
@@ -48,7 +70,7 @@ session_start();
         <div id = "UserLogInForm">
           <form action = "#" method = "POST">
             <h3 style = "font-size: 25px; text-align: center; color: #00FF66; ">Welcome Back</h3>
-            <input name = "LIMail" type = "text" placeholder = "Enter your username">
+            <input name = "LIMail" type = "text" placeholder = "Enter your E-Mail">
             <input name = "LIPassword" type = "password" placeholder = "Enter your password">
             <button name = "LogIn" type = "submit" class = "LogInButton">Log In</button>
             <?php
@@ -79,7 +101,7 @@ session_start();
                 header('Location: profile.php');
               }
               else{
-                echo "You entered wrong E-mail or Password";
+                echo "<h5 style = 'position: absolute; left: 24%; color: #e0e0e0'>You entered wrong E-mail or Password</h5>";
               }
             }
              ?>

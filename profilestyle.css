@@ -74,11 +74,10 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
-    transition: 0.3s;
 }
 
 .btn-style:hover{
-    background-color: #00c54f; 
+    background-color: #00c54f;
 }
 
 .btn-style-inner{
@@ -86,7 +85,6 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
-    transition: 0.3s;
 }
 
 .btn-style-inner:hover{

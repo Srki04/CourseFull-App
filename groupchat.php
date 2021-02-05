@@ -1,4 +1,7 @@
 <?php
+
+  // Created by Srdjan Grbic
+
   session_start();
  ?>
 <!DOCTYPE html>

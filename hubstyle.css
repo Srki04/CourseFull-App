@@ -73,7 +73,6 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
-    transition: 0.3s;
 }
 
 .btn-style:hover{
@@ -85,7 +84,6 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
-    transition: 0.3s;
 }
 
 .btn-style-inner:hover{
@@ -97,7 +95,6 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
-    transition: 0.3s;
 }
 
 .btn-style-innermost:hover{
@@ -191,7 +188,6 @@ html, body{
     font-size: 24px;
     display:inline-block;
     padding:5px;
-    transition: 0.3s;
 }
 
 .component:hover{

@@ -1,6 +1,9 @@
 <?php
   include "connection.php";
   session_start();
+
+  // Added PhP code by Srdjan Grbic
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
