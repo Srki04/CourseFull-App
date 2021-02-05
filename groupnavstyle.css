@@ -164,19 +164,29 @@ html, body{
     font-size: 48px;
 }
 
-.component-data td{
+.groups{
+    width:100%;
+    text-align: left;
+}
+
+.remove-btn{
+    font-size: 36px;
+    padding:5px;
+}
+
+.groups td{
     font-size: 48px;
     padding:5px;
 }
 
-.edit-btn, .submit-btn{
-    display:inline;
-    padding:5px;
-    font-size: 28px;
+.groups a{
+    color:black;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.edit-field{
-    display:none;
+.groups a:hover{
+    color:#00ff66;
 }
 
 .footer{
