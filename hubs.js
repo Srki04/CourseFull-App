@@ -28,7 +28,7 @@ function hubViewSetup(){
         accordion[i].addEventListener("click", function(){
             this.classList.toggle("active");
             this.classList.toggle("border-bottom");
-            var panel = this.parentNode.nextElementSibling;
+            var panel = this.nextElementSibling;
             if(panel.style.display === "block"){
                 panel.style.display = "none";
             }
@@ -48,7 +48,7 @@ function addSetup(item1, item2){
     for(let i = 0; i < addbtn.length; i++){
         addbtn[i].addEventListener("click", function(){
             this.style.display = "none";
-            var submit = this.previousElementSibling;
+            let submit = this.parentNode.previousElementSibling.childNodes[1];
             submit.style.display = "inline";
         });
     }
@@ -56,7 +56,7 @@ function addSetup(item1, item2){
     for(let i = 0; i < submitbtns.length; i++){
         submitbtns[i].addEventListener("click", function(){
             this.parentNode.style.display = "none";
-            var add = this.parentNode.nextElementSibling;
+            let add = this.parentNode.parentNode.nextElementSibling.childNodes[0];
             add.style.display = "block";
         });
     }
