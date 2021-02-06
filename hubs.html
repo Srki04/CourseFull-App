@@ -38,10 +38,10 @@
         <div class="functionality">
             <!--I'm thinking sort in alphabetical order-->
             <!--Also, the a tags should go to their respective components-->
-            <div id="hubs">
+            <!--<div id="hubs">
                 <div class="hub">
                     <div class="accordion">
-                        <button class="remove-hub btn-style">REMOVE HUB</button>
+
                         <button class="accordion-btn btn-style">HUB 1<span class="avg">Average Mark: <span
                                     id="hub1avg">90</span>%</span></button>
                     </div>
@@ -102,7 +102,85 @@
                 Enter a Hub Name:<input type="text" class="compname"></input>
                 <button class="btn-style hubname-submit-btn">OK</button>
             </div>
-            <button class="btn-style add-hub">ADD HUB</button>
+            <button class="btn-style add-hub">ADD HUB</button> -->
+            <div class="hubs">
+                <table class="accordion-tbl">
+                    <tr>
+                        <td class="remove-col"><button class="remove-hub btn-style">REMOVE HUB</button></td>
+                        <td>
+                            <button class="accordion-btn btn-style">HUB 1<span class="avg">Average Mark: <span
+                                        id="hub1avg">90</span>%</span></button>
+                            <div class="panel">
+                                <table class="accordion-tbl">
+                                    <tr>
+                                        <td class="remove-col">
+                                            <button class="remove-course btn-style-inner">REMOVE COURSE</button>
+                                        </td>
+                                        <td>
+                                            <button class="accordion-btn btn-style-inner">COURSE 1<span
+                                                    class="avg">Current
+                                                    Mark: <span id="hub1course1avg">90</span>%</span></button>
+                                            <div class="panel">
+                                                <table class="accordion-tbl">
+                                                    <tr>
+                                                        <td class="remove-col">
+                                                            <button class="remove-component btn-style-inner">REMOVE</button>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="component">Component 1</a>
+                                                            <span class="comp-mark">Mark: <span
+                                                                    id="hub1course1component1mark">90</span>%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="remove-col">
+                                                            <button class="remove-component btn-style-inner">REMOVE</button>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#" class="component">Component 2</a>
+                                                            <span class="comp-mark">Mark: <span
+                                                                    id="hub1course1component2mark">90</span>%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="remove-col">
+                                                            <div class="compname-submit">
+                                                                Enter a Component Name:<input type="text" class="compname"></input>
+                                                                <button class="btn-style-innermost compname-submit-btn">OK</button>
+                                                            </div>
+                                                        </td>
+                                                        <td><button class="btn-style-innermost add-component">ADD COMPONENT</button></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="remove-col">
+                                            <div class="coursename-submit">
+                                                Enter a Course Name:<input type="text" class="compname"></input>
+                                                <button class="btn-style-inner coursename-submit-btn">OK</button>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn-style-inner add-course">ADD COURSE</button></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="remove-col">
+                            <div class="hubname-submit">
+                                Enter a Hub Name:<input type="text" class="compname"></input>
+                                <button class="btn-style hubname-submit-btn">OK</button>
+                            </div>
+                        </td>
+                        <td><button class="btn-style add-hub">ADD HUB</button></td>
+                    </tr>
+                </table>
+            </div>
+
+
         </div>
     </div>
     <div class="footer"></div>
