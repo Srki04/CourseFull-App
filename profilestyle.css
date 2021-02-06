@@ -74,6 +74,7 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
+    transition: 0.3s;
 }
 
 .btn-style:hover{
@@ -85,6 +86,7 @@ html, body{
     color:#000;
     cursor: pointer;
     border:none;
+    transition: 0.3s;
 }
 
 .btn-style-inner:hover{
@@ -119,7 +121,7 @@ html, body{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-} 
+}
 
 .show {display: block;}
 

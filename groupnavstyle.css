@@ -164,123 +164,29 @@ html, body{
     font-size: 48px;
 }
 
-.hubs{
-    position: relative;
-    width:90%;
-}
-
-.accordion-tbl{
-    position:relative;
-    width:100%;
-}
-
-.accordion{
-    transition:0.4;
-}
-
-.accordion-btn{
+.groups{
     width:100%;
     text-align: left;
-    overflow: hidden;
-    font-size: 24px;
+}
+
+.remove-btn{
+    font-size: 36px;
     padding:5px;
 }
 
-.panel{
-    background-color: white;
-    overflow: hidden;
-    display:none;
-    margin-left:0px;
+.groups td{
+    font-size: 48px;
+    padding:5px;
 }
 
-.component{
-    text-decoration: none;
+.groups a{
     color:black;
-    top:15px;
-    font-size: 24px;
-    display:inline-block;
-    padding:5px;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.component:hover{
+.groups a:hover{
     color:#00ff66;
-}
-
-.comp-container{
-    margin-left: 40px;
-}
-
-.add-hub{
-    padding:5px;
-    font-size: 24px;
-    text-align: left;
-    float:right;
-}
-
-.add-course, .add-component{
-    padding:5px;
-    font-size: 24px;
-    text-align: left;
-    margin-bottom: 5px;
-    float:right;
-}
-
-.compname-submit-btn, .coursename-submit-btn, .hubname-submit-btn{
-    padding:5px;
-    font-size: 16px;
-    text-align: left;
-    margin-bottom: 5px;
-    margin-right: 10%;
-}
-
-.compname-submit{
-    display:none;
-    position: relative;
-}
-
-.coursename-submit, .hubname-submit{
-    display:none;
-    position: relative;
-}
-
-.remove-col{
-    position: relative;
-    width:15%;
-    vertical-align: top;
-}
-
-.remove-hub{
-    padding: 13px 5px;
-    position:relative;
-    float:right;
-    width:100%;
-}
-
-.remove-course{
-    padding: 13px 5px;
-    position:relative;
-    float:right;
-    width:100%;
-}
-
-.remove-component{
-    padding: 5px 5px;
-    position:relative;
-    display:inline;
-    width:100%;
-}
-
-.avg{
-    float:right;
-    margin-right:5%;
-}
-
-.comp-mark{
-    padding:5px;
-    font-size:20px;
-    display:block;
-    margin-left:4%;
 }
 
 .footer{

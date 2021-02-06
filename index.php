@@ -3,6 +3,7 @@ session_start();
  ?>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CourseFull</title>
   </head>
@@ -29,7 +30,7 @@ session_start();
                 $Password = $_POST['RPassword'];
 
                 include 'connection.php';
-                $Query = "INSERT INTO `users` VALUES (NULL, '$FirsName', '$LastName', '$Mail', '$Password')";
+                $Query = "INSERT INTO `users` VALUES (NULL, '$FirsName', '$LastName', '$Mail', '$Password', 0)";
                 $Result = mysqli_query($Link, $Query) or die(mysqli_error());
 
                 $Number = mysqli_affected_rows($Link);
@@ -66,12 +67,14 @@ session_start();
                 $LastName = $Row[2];
                 $EMailAdress = $Row[3];
                 $Password = $Row[4];
+                $Goal = $Row[5];
 
                 $_SESSION['userid'] = $UserId;
                 $_SESSION['firstname'] = $FirstName;
                 $_SESSION['lastname'] = $LastName;
                 $_SESSION['emailadress'] = $EMailAdress;
                 $_SESSION['password'] = $Password;
+                $_SESSION['goal'] = $Goal;
 
                 header('Location: profile.php');
               }
